@@ -1,0 +1,102 @@
+! Title: Master Allowlist – Bambu + Wyze + Smart Home
+! Description: DNS allowlist for Bambu printers, Wyze cameras (cloud clips), and smart home platforms
+! Version: 1.2.0
+! Last modified: 2025-12-28
+!
+! Environment:
+! - Bambu A1 / A1 mini (cloud + mobile app)
+! - Wyze cameras (all models, cloud clips enabled)
+! - Apple HomeKit
+! - Google Home
+! - Amazon Alexa
+! - TP-Link / Kasa
+! - TP-Link Omada router & controller
+!
+
+################################
+# Bambu Lab – Printers
+################################
+
+@@||bambulab.com^
+@@||api.bambulab.com^
+@@||cloud.bambulab.com^
+@@||mqtt.bambulab.com^
+@@||ota.bambulab.com^
+@@||log.bambulab.com^
+@@||device.bambulab.com^
+@@||printer.bambulab.com^
+
+# Regional / CDN / Cloud
+@@||bambulab.cn^
+@@||bambulab-static.com^
+@@||bambulab-cloud.com^
+@@||bambulab-cdn.com^
+@@||aliyun.com^
+@@||aliyuncs.com^
+
+################################
+# Wyze – Cameras (Cloud Clips)
+################################
+
+@@||wyze.com^
+@@||api.wyze.com^
+@@||auth.wyze.com^
+@@||events.wyze.com^
+@@||notify.wyze.com^
+@@||wyzecam.com^
+@@||wyzeusercontent.com^
+@@||wyzeapi.com^
+@@||wyze-platform-service.wyzecam.com^
+
+# AWS + CDN (scoped to Wyze)
+@@||amazonaws.com^$domain=wyze*
+@@||cloudfront.net^$domain=wyze*
+
+################################
+# Apple HomeKit
+################################
+
+@@||apple.com^
+@@||icloud.com^
+@@||icloud-content.com^
+@@||push.apple.com^
+@@||setup.icloud.com^
+@@||guzzoni.apple.com^
+
+################################
+# Google Home
+################################
+
+@@||googleapis.com^
+@@||firebaseio.com^
+@@||googleusercontent.com^
+@@||clients.l.google.com^
+@@||mqtt.googleapis.com^
+
+################################
+# Amazon Alexa
+################################
+
+@@||amazon.com^
+@@||amazonalexa.com^
+@@||alexa.amazon.com^
+@@||avs-alexa-na.amazon.com^
+@@||device-metrics-us.amazon.com^
+@@||amazonaws.com^$domain=alexa*
+
+################################
+# TP-Link / Kasa
+################################
+
+@@||tplinkcloud.com^
+@@||tplinkra.com^
+@@||kasa.com^
+@@||iot.kasa.com^
+@@||devs.tplinkcloud.com^
+
+################################
+# Time Sync (critical for IoT)
+################################
+
+@@||ntp.org^
+@@||pool.ntp.org^
